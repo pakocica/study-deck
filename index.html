@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Sextant</title>
+<link rel="canonical" href="https://pkocourek.com/sextant/" />
+<!--
+  REDIRECT STUB — this is the ONLY thing the old `study-deck` repo serves.
+
+  The app was renamed Study Deck -> Sextant on 2026-08-14 and moved to
+  /sextant/. Links to /study-deck/ are already in other people's hands, so this
+  path must keep working FOREVER. Do not delete this repo, and never let
+  publish.sh point back at it (it force-pushes an orphan commit and would wipe
+  this file, stranding every old link).
+
+  ⚠ THE WHOLE POINT: the query string must survive the hop. Share links carry
+  ?k=<token>; a bare <meta http-equiv=refresh> to a plain URL silently drops it
+  and drops the student on a gate with no access. So the JS below carries
+  location.search + location.hash across, and uses location.replace() so the
+  dead URL never lands in history and the back button can't bounce.
+
+  The <meta refresh> underneath is the no-JS fallback ONLY. It cannot carry the
+  token (HTML has no way to interpolate it) — but the app is a JS app that
+  cannot run without JS anyway, so anyone who would be served by that fallback
+  could not have used the app regardless. It is there so a no-JS visitor still
+  lands somewhere real instead of staring at a blank page.
+-->
+<script>
+  (function () {
+    var base = "https://pkocourek.com/sextant/";
+    try {
+      location.replace(base + (location.search || "") + (location.hash || ""));
+    } catch (e) {
+      location.href = base;
+    }
+  })();
+</script>
+<meta http-equiv="refresh" content="0;url=https://pkocourek.com/sextant/" />
+<style>
+  :root{color-scheme:dark}
+  html,body{height:100%;margin:0}
+  body{background:#0d0c0a;color:#f1e9da;display:flex;align-items:center;justify-content:center;
+       font-family:'Spline Sans',system-ui,-apple-system,sans-serif;text-align:center;padding:24px}
+  .w{max-width:38ch}
+  h1{font-family:Georgia,serif;font-weight:600;font-size:23px;margin:0 0 10px}
+  p{color:#998f7e;font-size:14px;line-height:1.6;margin:0}
+  a{color:#f3a73c}
+  .ico{width:54px;height:54px;border-radius:12px;margin:0 auto 18px;display:block}
+</style>
+</head>
+<body>
+<div class="w">
+  <svg class="ico" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><rect width="64" height="64" fill="#0d0c0a"/><path d="M22 6 V58 M42 6 V58 M6 24 H58 M6 44 H58" stroke="#272219" stroke-width="1" fill="none"/><circle cx="14" cy="51" r="3.6" fill="#f1e9da"/><path d="M14 51 C32 50 36 40 25 33 C14 26 24 17 40 15" fill="none" stroke="#f3a73c" stroke-width="4" stroke-linecap="round" stroke-dasharray="7 6"/><path d="M42 10 L52 20 M52 10 L42 20" stroke="#cf5f4a" stroke-width="4.6" stroke-linecap="round" fill="none"/></svg>
+  <h1>Study Deck is now Sextant</h1>
+  <p>Taking you to <a href="https://pkocourek.com/sextant/">pkocourek.com/sextant/</a> — your progress and your course access come with you. If nothing happens, tap the link.</p>
+</div>
+</body>
+</html>
